@@ -1,0 +1,4 @@
+particles_type	0
+cntnumb_of_AandB	4.34371e-311
+cntnumb_of_AandS	3.08903e-317
+cntnumb_of_BandS	1.133e-317
