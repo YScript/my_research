@@ -105,7 +105,17 @@ int main(int argc, char const *argv[])
 	int number_np = count;
 //	cout <<"number_of_nearpoints"<<"\t"<<np<<"\t"<<number_np<<endl;
 	int id;
-	
+//	int **id_near_point= NULL;
+//	cout <<"line 94"<<endl;
+//	id_near_point = new int*[lxyz];
+//	cout <<"line 95"<<endl;
+//	for (int i = 0; i < lxyz; ++i)
+//	{
+//		id_near_point[i] = new int [number_np];
+//	}
+/*
+	the 2nd pointer could not be the position that be not the top defined ;
+*/
 	for (int i = 0; i < lxyz; ++i)
 	{
 		for (int j = 0; j < number_np; ++j)
@@ -156,30 +166,16 @@ int main(int argc, char const *argv[])
 		if(i <number_ghp)
 		{
 			len = len_ga;
-			for(int j = 0;j <len;++j)
-			{
-				fin >>id_of_atom;
-				id_of_atom--;
-				atom[id_of_atom].type = 1;
-			}	
 		}
 		else
 		{
 			len = len_fa + len_fb;
-			for(int k = 0;k<len;++k)
-			{
-				fin >>id_of_atom;
-				id_of_atom--;
-				if(k <len_fa)
-				{
-					atom[id_of_atom].type = 1;
-				}
-				else
-				{
-					atom[id_of_atom].type = 2;
-				}		
-			}
 		}
+		for(int j = 0; j < len; ++j)
+		{
+			id_
+		}
+
 	}
 	fin.close();
 	

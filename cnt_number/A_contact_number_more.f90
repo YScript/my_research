@@ -42,7 +42,7 @@ xxlyb2=xxly/2.
   do 5 i=1,ntot-1
 	    j=i
 	    do j=i+1,ntot
-	      
+      
 	      rrx=float(natom(i,1)-natom(j,1))
 	      rry=float(natom(i,2)-natom(j,2))
 	      rrz=float(natom(i,3)-natom(j,3))
