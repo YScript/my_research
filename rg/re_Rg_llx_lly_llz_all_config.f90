@@ -6,9 +6,6 @@
 	   integer, allocatable, dimension(:) :: nn, icha, mc, mw,ichap, nempty, mne, nnd0
 
 !/////////////////////¸´ÖÆÕ³ÌùÇøÓò///////////////////////////////////////////////////////////////////
-
-
-
 	nnd_A=6
 	nnd1=nnd_A
     nnd_B=6
@@ -18,8 +15,6 @@
 	ntotc1=900
 	ntotc=1900
 	ntotc2=ntotc-ntotc1
-
- 
 	nnn=26
 	 
 	  LXxx=60
@@ -35,21 +30,15 @@
      XLYyyH=XLYYY/2
      XLZzzH=XLZZZ/2
 	  	  ntot=LXxx*LYyy*LZzz
- 
-  
- 
-      
 	   allocate(atom(ntot,3),nna(ntot,26),nchain(ntotc,nnd),nn(ntot),icha(ntot),mc(ntot),mw(ntot),&
 	            ichap(ntot),nempty(ntot),mne(ntot),nnd0(ntotc))
 
 !/////////////////////¸´ÖÆÕ³ÌùÇøÓò///////////////////////////////////////////////////////////////////
  
  
- 
+!	read the data from the file  
 	do i=1,ntotc
-	 
 	    	nnd0(i)=nnd_di
-		 
 	enddo
 
 	open(1,file='d.dat',status='old')
@@ -59,18 +48,14 @@
 		enddo
 	close(1)
 
-
-
- 
+!	build the init system box lattice points and points; 
 		atom(1,1)=0.
 		atom(1,2)=0.
 	  	atom(1,3)=0.0
-	 	
+	
 		   kkk=0
 		 do  i1=1,LXxx
-
     	 do  i2=1,LYyy 
-	 
 	   	 do  i3=1,LZzz
 			  kkk=kkk+1
 	      	  atom(kkk,1)=atom(1,1)+(i1-1)			
@@ -79,8 +64,6 @@
 		  enddo
 		  enddo
 		  enddo
-  
-
 	!//////////////////////  Rg/////////////////////////////////////////////////////////////
 
      !////////////// diblock  Rg   ½ÓÖ¦Á´µÄRg  ///////////
@@ -115,6 +98,7 @@
 		x0=atom( nchain(i,j-1) ,  1) 
 		y0=atom( nchain(i,j-1) ,  2) 
 		z0=atom( nchain(i,j-1) ,  3) 
+!		period boundry condition;
 		if(x1 > llx ) x1=x1-lxxx
 		if(y1 > lly ) y1=y1-lyyy
 		if(z1 > llz ) z1=z1-lzzz

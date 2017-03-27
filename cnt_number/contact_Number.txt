@@ -1,4 +1,2 @@
-particles_type	0
-cntnumb_of_AandB	0
-cntnumb_of_AandS	0
-cntnumb_of_BandS	0
+ctnber_AA	ctnber_AB	ctnber_AS	ctnber_AW	ctnber_BB	ctnber_BS	ctnber_BW
+0.757331	0.00568717	0.179712	0.0572697	0.099465	0.890977	0
