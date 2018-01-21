@@ -31,7 +31,9 @@ contains
 			simAnnSteps  = 80
 			std_mcsu = 8000
 		end if
-		
+	!	*************************************************************	!
+	! 					start simulated annealing process				!
+	!	*************************************************************	!	
 		do 3001 n = 1,simAnnSteps
 
 			simAnnFactor =1.0/ simAnnTemp
@@ -106,8 +108,8 @@ contains
 						if ( ichg .eq. 1 )then
 							call attChange()
 
-!!!!						end  call attChange()
-						!	write(*,*) 'ichg = 1'
+						!********end  call attChange()*************************************!
+							!	write(*,*) 'ichg = 1'
 						else if ( ichg .eq.2)then      !!!! refer to 'if ( ichg .eq. 1 )then'
 							
 							if (nii .lt. nxx) then
